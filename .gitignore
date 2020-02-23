@@ -6,3 +6,6 @@ __pycache__/functional.cpython-36.pyc
 .idea/vcs.xml
 .idea/modules.xml
 .idea/misc.xml
+functional.pyc
+upload.sh
+setup.py
