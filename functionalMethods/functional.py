@@ -1,6 +1,3 @@
-from objc._objc import function
-
-
 def map(o, l):
 	tmp = o.__iter__()
 	new = list([])
@@ -25,12 +22,14 @@ def filter(o, l):
 			new += [i]
 	return new
 
+
 def zip(o, v, l):
 	v = list(v)
 	new = list([])
 	for i in range(len(o)):
 		new += [l(o[i], v[i])]
 	return new
+
 
 def unzip(o, sx, dx):
 	tmp = o.__iter__()
@@ -40,6 +39,7 @@ def unzip(o, sx, dx):
 		new_sx += [sx(i)]
 		new_dx += [dx(i)]
 	return new_sx, new_dx
+
 
 def sort(o, l): # with respect to a rule
 	pass
