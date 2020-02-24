@@ -1,4 +1,4 @@
-from functional import *
+from pygraham import *
 
 
 def test_list():

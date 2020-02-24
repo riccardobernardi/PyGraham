@@ -74,6 +74,9 @@ class dict(dict):
 	def unzip(self, sx, dx):
 		return unzip(list(self.items()), sx, dx)
 
+	def zip(self, v, l):
+		return zip(list(self), v, l)
+
 class set(set):
 	def map(self, l):
 		return map(list(self), l)
@@ -86,3 +89,6 @@ class set(set):
 
 	def unzip(self, sx, dx):
 		return unzip(list(self), sx, dx)
+
+	def zip(self, v, l):
+		return zip(list(self), v, l)

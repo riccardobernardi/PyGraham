@@ -156,3 +156,6 @@ venv/lib/python3.8/site-packages/pip-19.0.3-py3.8.egg/pip/_internal/utils/__pyca
 venv/lib/python3.8/site-packages/pip-19.0.3-py3.8.egg/pip/_internal/utils/__pycache__/setuptools_build.cpython-38.pyc
 venv/lib/python3.8/site-packages/pip-19.0.3-py3.8.egg/pip/_internal/utils/__pycache__/temp_dir.cpython-38.pyc
 venv
+build
+dist
+*.pyc
