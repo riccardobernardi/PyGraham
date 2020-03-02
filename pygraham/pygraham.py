@@ -9,6 +9,9 @@ def map(o, l):
 def reduce(o, l):
 	tmp = o.__iter__()
 	r = 0
+	if len(o)>0:
+		if type(o[0]) == str:
+			r = ''
 	for i in tmp:
 		r = l(r, i)
 	return r
@@ -31,6 +34,12 @@ def zip(o, v, l):
 	return new
 
 
+def next(o, l):
+	for i in range(len(o)):
+		l(o[i])
+	return o
+
+
 def unzip(o, sx, dx):
 	tmp = o.__iter__()
 	new_sx = list([])
@@ -41,8 +50,22 @@ def unzip(o, sx, dx):
 	return new_sx, new_dx
 
 
-def sort(o, l): # with respect to a rule
+def sort(o, l):  # with respect to a rule
 	pass
+
+
+# def show(o):
+# 	for i in range(len(o)):
+# 		print(o[i], end=' ')
+# 	print()
+# 	return o
+
+
+def IF(test, true, false):
+	if test:
+		return true
+	else:
+		return false
 
 
 class list(list):
@@ -61,6 +84,13 @@ class list(list):
 	def zip(self, v, l):
 		return zip(list(self), v, l)
 
+	# def show(self):
+	# 	return show(list(self))
+
+	def next(self, l):
+		return next(list(self), l)
+
+
 class dict(dict):
 	def map(self, l):
 		return map(list(self.items()), l)
@@ -77,6 +107,10 @@ class dict(dict):
 	def zip(self, v, l):
 		return zip(list(self), v, l)
 
+	# def show(self):
+	# 	return show(list(self))
+
+
 class set(set):
 	def map(self, l):
 		return map(list(self), l)
@@ -92,3 +126,6 @@ class set(set):
 
 	def zip(self, v, l):
 		return zip(list(self), v, l)
+
+	# def show(self):
+	# 	return show(list(self))
